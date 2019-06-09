@@ -1,0 +1,322 @@
+@charset "UTF-8";
+/* common */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+textarea,
+input,
+button,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 14px;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1.5;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #afaea9;
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+}
+
+.blind {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+/* note-list */
+.note-list-container {
+  margin-top: 15px;
+}
+.note-list-container .note-list {
+  margin-top: -1%;
+  margin-left: -1%;
+  text-align: left;
+  letter-spacing: -5px;
+}
+
+/* note */
+.note {
+  display: inline-block;
+  position: relative;
+  width: 24%;
+  margin-top: 1%;
+  margin-left: 1%;
+  padding-top: 33px;
+  border: 1px solid #aaa;
+  background: #fff2ab;
+  box-sizing: border-box;
+  letter-spacing: 0;
+  vertical-align: top;
+  box-shadow: 0 3px 5px 1px #ddd;
+  word-break: break-all;
+}
+.note .note-inner {
+  padding: 10px;
+}
+.note .note-inner h2 {
+  font-weight: bold;
+}
+.note .note-inner .note-date {
+  font-size: 0.9em;
+  text-align: right;
+}
+.note .note-inner .note-text {
+  margin-top: 5px;
+}
+.note .note-menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  padding: 6px 0;
+  background: #ffeb81;
+}
+.note .note-menu .note-menu-l {
+  float: left;
+  margin-left: 10px;
+}
+.note .note-menu .note-menu-r {
+  float: right;
+  margin-right: 10px;
+}
+.note .note-menu .note-menu-l button, .note .note-menu .note-menu-r button {
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: top;
+}
+.note .note-menu .note-menu-l button:first-child, .note .note-menu .note-menu-r button:first-child {
+  margin-left: 0;
+}
+
+/* modal */
+.modal {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  letter-spacing: -5px;
+}
+.modal:before {
+  display: inline-block;
+  overflow: hidden;
+  width: 1px;
+  height: 100%;
+  margin-right: -1px;
+  vertical-align: middle;
+  content: '';
+}
+.modal .modal-card {
+  display: inline-block;
+  position: relative;
+  min-width: 440px;
+  padding: 20px;
+  background: #fff2ab;
+  letter-spacing: 0;
+  text-align: left;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+/* note regist */
+.note-what-for h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.note-form .note-label {
+  display: block;
+  margin-top: 10px;
+}
+
+.note-form .note-exp {
+  display: block;
+  margin-top: 5px;
+  padding: 5px 8px;
+  background: #ffeb81;
+}
+
+.note-form .note-title {
+  width: 100%;
+  border: 0 none;
+  background: transparent;
+  line-height: 1.5;
+  vertical-align: top;
+}
+
+.note-form .note-text {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  background: transparent;
+  line-height: 1.5;
+  vertical-align: top;
+}
+
+.note-button {
+  margin-top: 20px;
+  text-align: center;
+}
+.note-button button {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #e24444;
+  background: #fff;
+  vertical-align: top;
+}
+
+.note-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+/* note delete */
+.memo-what-for h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.memo-delete {
+  margin-top: 10px;
+}
